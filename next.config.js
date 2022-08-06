@@ -1,7 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const withLess = require("next-with-less");
+withLess.patchNext(require("next/dist/build/webpack/config/blocks/css"));
 
-module.exports = nextConfig
+module.exports = withLess({
+  reactStrictMode: true,
+  lessLoaderOptions: {
+    additionalData: (content) => `${content}\n@border-radius-base: 5px;`,
+  },
+});
