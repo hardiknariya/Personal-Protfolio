@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+
+  .logo {
+    display: flex;
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  .header-menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .ant-menu-item {
+      background: none;
+      color: #fff;
+      .ant-menu-title-content {
+        padding-bottom: 0.5rem;
+        font-size: 18px;
+
+        &:hover {
+          border-bottom: 2px solid;
+        }
+      }
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    .ant-menu-item-selected {
+      .ant-menu-title-content {
+        border-bottom: 2px solid;
+      }
+    }
+  }
+}
