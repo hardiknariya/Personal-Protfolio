@@ -1,6 +1,6 @@
 import { Layout } from "../components";
 import Head from "next/head";
-import Image from "next/image";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
   return (
@@ -10,8 +10,28 @@ export default function Home() {
         <meta name="description" content="Created by Hardik Nariya" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{ height: "200vh" }}>
-        <h1>Hello hardik</h1>
+
+      <div id="home">
+        <div className="container py-5 mb-5">
+          <div className="introduction">
+            <h1
+              style={{
+                fontSize: "calc(1.375rem + 1.5vw)",
+                color: "#00ff7f",
+              }}
+            >
+              Hello! I am
+            </h1>
+            <h1 className="name">Hardik Nariya</h1>
+            <Typewriter
+              options={{
+                strings: ["Hello", "World"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
+        </div>
       </div>
     </Layout>
   );
